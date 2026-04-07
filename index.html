@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+
+<p id="Demo" style="background-color: chocolate;">
+    This is a demo paragraph.
+</p>
+
+<button id="b" >Click Me</button>
+
+<script>
+    document.getElementById("Demo").addEventListener("click", function() {
+        alert("Paragraph clicked!");
+    });
+
+    document.getElementById("b").addEventListener("mouseover", function(){
+        this.style.backgroundColor = "blue";
+    });
+
+    document.getElementById("b").addEventListener("mouseout", function(){
+        this.style.backgroundColor = "chocolate";
+    });
+    document.getElementById("b").addEventListener("click", myFunction);
+
+    function myFunction() {
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const d = new Date();
+        const dayName = days[d.getDay()];
+        alert("Today is: " + dayName);
+    }
+</script>
+
+</body>
+</html>
